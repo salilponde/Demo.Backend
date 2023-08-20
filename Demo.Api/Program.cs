@@ -1,3 +1,4 @@
+using Demo.Persistence;
 using Demo.Services;
 using Demo.Services.Abstractions;
 
@@ -15,7 +16,8 @@ builder.Services.AddCors(options => {
     });
 });
 
-builder.Services.AddTransient<IUserService, InMemUserService>();
+builder.Services.AddTransient<DemoContext>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 var app = builder.Build();
 

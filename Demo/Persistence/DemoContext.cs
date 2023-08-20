@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Persistence
 {
-    internal class DemoContext : DbContext
+    public class DemoContext : DbContext
     {
         public DbSet<User> Users { get; set; }
 
